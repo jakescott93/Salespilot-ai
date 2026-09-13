@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ */
+/*  VELMONT theme variables                                            */
+/*  Channels only (r g b) so Tailwind can compose alpha.               */
+/* ------------------------------------------------------------------ */
+
+:root,
+[data-theme="automotive"] {
+  /* Obsidian ground, titanium surfaces, champagne accent */
+  --v-ground: 5 5 5;
+  --v-surface: 12 12 12;
+  --v-raised: 20 20 20;
+  --v-line: 38 38 38;
+  --v-line-strong: 64 64 64;
+  --v-ink: 246 244 237; /* ivory */
+  --v-ink-soft: 168 165 156;
+  --v-ink-faint: 104 104 104; /* stone grey */
+  --v-accent: 212 176 115; /* champagne */
+  color-scheme: dark;
+}
+
+[data-theme="horology"] {
+  /* Deep green ground, warmer ink, same champagne accent */
+  --v-ground: 8 26 20; /* a shade below #0B2D23 for depth */
+  --v-surface: 11 45 35;
+  --v-raised: 16 56 44;
+  --v-line: 30 66 54;
+  --v-line-strong: 52 92 78;
+  --v-ink: 246 244 237;
+  --v-ink-soft: 156 143 122; /* warm taupe */
+  --v-ink-faint: 118 110 96;
+  --v-accent: 212 176 115;
+  color-scheme: dark;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Base                                                               */
+/* ------------------------------------------------------------------ */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: rgb(var(--v-ground));
+  color: rgb(var(--v-ink));
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgb(var(--v-accent) / 0.25);
+  color: rgb(var(--v-ink));
+}
+
+/* Calm, visible focus — never a default blue ring. */
+:focus {
+  outline: none;
+}
+:focus-visible {
+  outline: 1px solid rgb(var(--v-accent) / 0.8);
+  outline-offset: 4px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Editorial type scale (fluid)                                       */
+/* ------------------------------------------------------------------ */
+
+.type-hero {
+  font-size: clamp(2.5rem, 7.2vw, 6.75rem);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+}
+
+.type-display {
+  font-size: clamp(2.1rem, 5.4vw, 5rem);
+  line-height: 1.06;
+  letter-spacing: -0.005em;
+}
+
+.type-title {
+  font-size: clamp(1.6rem, 3.2vw, 2.75rem);
+  line-height: 1.14;
+}
+
+.type-question {
+  font-size: clamp(1.75rem, 4vw, 3.25rem);
+  line-height: 1.1;
+}
+
+.type-label {
+  font-size: 0.6875rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.type-label-sm {
+  font-size: 0.625rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Atmosphere                                                         */
+/* ------------------------------------------------------------------ */
+
+/* Fine photographic grain, applied once at the page level. */
+.v-grain::after {
+  content: "";
+  position: fixed;
+  inset: -100%;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Hairline rules that read as printed, not divs. */
+.v-rule {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgb(var(--v-line) / 0),
+    rgb(var(--v-line-strong)),
+    rgb(var(--v-line) / 0)
+  );
+}
+
+/* Scroll cue — a slow falling hairline. */
+@keyframes v-cue {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  45% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  55% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+.v-cue {
+  animation: v-cue 2.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+/* Underline inputs */
+.v-field {
+  @apply w-full bg-transparent border-0 border-b border-line-strong/70 rounded-none px-0 py-3 font-display text-xl xs:text-2xl text-ink placeholder:text-ink-faint/70 focus:border-accent/70 transition-colors duration-500;
+}
+
+/* Hide number input spinners */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Discreet scrollbars inside custom listboxes */
+.v-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--v-line-strong)) transparent;
+}
+.v-scroll::-webkit-scrollbar {
+  width: 3px;
+}
+.v-scroll::-webkit-scrollbar-thumb {
+  background: rgb(var(--v-line-strong));
+}
