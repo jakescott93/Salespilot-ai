@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { site } from "@/content/site";
-import { Wordmark } from "./Brand";
+import { Wordmark, Logo } from "./Brand";
 
 const links = [
   { href: "#menu", label: "Menu" },
@@ -30,7 +30,8 @@ export function Nav() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
-        <a href="#top" className="text-2xl text-bone md:text-3xl">
+        <a href="#top" className="flex items-center gap-3 text-2xl text-bone md:text-3xl">
+          <Logo size={38} />
           <Wordmark />
         </a>
 

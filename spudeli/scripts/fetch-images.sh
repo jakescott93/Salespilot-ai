@@ -26,6 +26,10 @@ g sphero.webp     hf_20260914_124644_2eb41af4-f4e9-4271-8ad5-6dfcf307d74a_min.we
 g spbenefit.webp  hf_20260914_124644_9793c5e5-75d8-4f69-8846-e4489f490ee0_min.webp
 g sploaded.webp   hf_20260914_124644_93968b49-bd40-49a0-be13-a6227e5d4fd3_min.webp
 
+# --- Spüdeli's real logo (their Instagram brand mark) ---
+curl -fsSL -o "$DIR/logo.png" "https://d2ol7oe51mr4n9.cloudfront.net/user_3C8OkTgGhJ23GOJgkItDmo6xIYC/346cd49c-db18-43e0-9392-ea8413d05c0b.png" && echo "img logo.png" || echo "MISS logo.png"
+curl -fsSL -o "$DIR/logomark.png" "https://d8j0ntlcm91z4.cloudfront.net/user_3C8OkTgGhJ23GOJgkItDmo6xIYC/hf_20260914_131903_b5b86e4d-e881-4e9b-a1ff-628293b9c1ea.png" && echo "img logomark.png" || echo "MISS logomark.png"
+
 # --- real photos from Instagram @spudeli_ (baked in at build time) ---
 r real1.jpg "https://scontent-sea1-1.cdninstagram.com/v/t51.82787-15/670264080_17865479697656046_5553689785234880511_n.heic?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-sea1-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gGjQMfvqk1f0rfryFWXE6eq1X8nAektVvnmBGH17xAPnAS91yeCmdlIFLLlt_ijBoY&_nc_ohc=DAb28m8SWq4Q7kNvwGUF5Gz&_nc_gid=531Gs8VURLJE5fUJ_dM4pg&edm=AOQ1c0wBAAAA&ccb=7-5&ig_cache_key=Mzg3MjI0Mzc4OTY5NjA4NTIwMQ%3D%3D.3-ccb7-5&oh=00_AQLhVt-mI5sXTPK6Q45oRKVSyoFAqVqIMbuSvn-1SrZz9g&oe=6AADA533&_nc_sid=8b3546"
 r real2.jpg "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/797722968_17890944132674261_3915918575495612450_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_cat=105&_nc_oc=Q6cZ2gGjQMfvqk1f0rfryFWXE6eq1X8nAektVvnmBGH17xAPnAS91yeCmdlIFLLlt_ijBoY&_nc_ohc=jAQDcwc0qWUQ7kNvwF3iUfE&_nc_gid=531Gs8VURLJE5fUJ_dM4pg&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AQKDBNnCBiTLXBD78FznLFkyG-Verhk7P9BLqrnr6NR_uQ&oe=6AADAC9C&_nc_sid=8b3546"

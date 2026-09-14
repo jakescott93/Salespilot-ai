@@ -37,6 +37,26 @@ export function Wordmark({
   );
 }
 
+/** Spüdeli's real logo (their Instagram brand mark), as a circular badge. */
+export function Logo({
+  size = 40,
+  className = "",
+}: {
+  size?: number;
+  className?: string;
+}) {
+  return (
+    <img
+      src="/img/logo.png"
+      alt="Spüdeli"
+      width={size}
+      height={size}
+      className={`rounded-full object-cover ring-1 ring-ember/40 ${className}`}
+      style={{ width: size, height: size }}
+    />
+  );
+}
+
 /** Circular flame monogram badge. */
 export function Monogram({ className = "" }: { className?: string }) {
   return (

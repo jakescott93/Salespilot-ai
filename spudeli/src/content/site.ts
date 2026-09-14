@@ -53,6 +53,8 @@ export const img = {
   sphero: "/img/sphero.webp",
   spbenefit: "/img/spbenefit.webp",
   sploaded: "/img/sploaded.webp",
+  logo: "/img/logo.png",
+  logomark: "/img/logomark.png",
   // Real photos from Instagram @spudeli_
   real1: "/img/real1.jpg",
   real2: "/img/real2.jpg",

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { site } from "@/content/site";
-import { Wordmark } from "./Brand";
+import { Wordmark, Logo } from "./Brand";
 import { Embers } from "./Embers";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -44,6 +44,9 @@ export function EnterGate() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: EASE, delay: 0.15 }}
           >
+            <div className="mb-7">
+              <Logo size={104} className="shadow-2xl" />
+            </div>
             <p className="type-label text-ember">{site.descriptor}</p>
             <div className="my-6 overflow-hidden">
               <motion.div
