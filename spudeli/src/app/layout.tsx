@@ -5,7 +5,7 @@ import "./globals.css";
 
 const serif = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   variable: "--font-serif",
   display: "swap",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#211b15",
+  themeColor: "#0c0a08",
   width: "device-width",
   initialScale: 1,
 };
@@ -41,7 +41,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-GB" className={`${serif.variable} ${sans.variable}`}>
-      <body className="bg-bone text-ink antialiased">
+      <body className="bg-obsidian text-bone antialiased">
         <div className="grain" aria-hidden />
         {children}
       </body>

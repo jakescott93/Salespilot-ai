@@ -6,7 +6,7 @@ import { Wordmark } from "./Brand";
 
 const links = [
   { href: "#menu", label: "Menu" },
-  { href: "#story", label: "Our Kitchen" },
+  { href: "#craft", label: "The Craft" },
   { href: "#find", label: "Find Us" },
 ];
 
@@ -15,7 +15,7 @@ export function Nav() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 32);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -23,14 +23,14 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-deli ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-smoke ${
         scrolled
-          ? "bg-bone/90 backdrop-blur-md border-b border-olive/15"
-          : "bg-transparent"
+          ? "bg-obsidian/85 backdrop-blur-md border-b border-ember/15"
+          : "bg-gradient-to-b from-obsidian/70 to-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
-        <a href="#top" className="text-xl md:text-2xl text-ink">
+        <a href="#top" className="text-2xl text-bone md:text-3xl">
           <Wordmark />
         </a>
 
@@ -39,18 +39,18 @@ export function Nav() {
             <a
               key={l.href}
               href={l.href}
-              className="type-label link-underline text-ink/80 hover:text-ink"
+              className="type-label link-underline text-bone/75 hover:text-bone"
             >
               {l.label}
             </a>
           ))}
           <a
-            href={site.justEatUrl}
+            href={site.order.wirralBites}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-bone transition-colors duration-300 hover:bg-ember"
+            className="group inline-flex items-center gap-2 rounded-full bg-ember px-5 py-2.5 text-obsidian transition-transform duration-300 hover:-translate-y-0.5"
           >
-            <span className="type-label">Order Online</span>
+            <span className="type-label">Order</span>
             <span className="transition-transform duration-300 group-hover:translate-x-0.5">
               &rarr;
             </span>
@@ -59,23 +59,23 @@ export function Nav() {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden text-ink"
+          className="md:hidden text-bone"
           aria-label="Menu"
           aria-expanded={open}
         >
           <div className="flex flex-col gap-[5px]">
             <span
-              className={`h-[1.5px] w-6 bg-ink transition-transform duration-300 ${
+              className={`h-[1.5px] w-6 bg-bone transition-transform duration-300 ${
                 open ? "translate-y-[6.5px] rotate-45" : ""
               }`}
             />
             <span
-              className={`h-[1.5px] w-6 bg-ink transition-opacity duration-300 ${
+              className={`h-[1.5px] w-6 bg-bone transition-opacity duration-300 ${
                 open ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`h-[1.5px] w-6 bg-ink transition-transform duration-300 ${
+              className={`h-[1.5px] w-6 bg-bone transition-transform duration-300 ${
                 open ? "-translate-y-[6.5px] -rotate-45" : ""
               }`}
             />
@@ -83,9 +83,8 @@ export function Nav() {
         </button>
       </nav>
 
-      {/* Mobile sheet */}
       <div
-        className={`overflow-hidden border-t border-olive/15 bg-bone/95 backdrop-blur-md transition-[max-height] duration-500 ease-deli md:hidden ${
+        className={`overflow-hidden border-t border-ember/15 bg-obsidian/95 backdrop-blur-md transition-[max-height] duration-500 ease-smoke md:hidden ${
           open ? "max-h-96" : "max-h-0"
         }`}
       >
@@ -95,17 +94,17 @@ export function Nav() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="type-title text-ink"
+              className="type-title text-bone"
             >
               {l.label}
             </a>
           ))}
           <a
-            href={site.justEatUrl}
+            href={site.order.wirralBites}
             target="_blank"
             rel="noreferrer"
             onClick={() => setOpen(false)}
-            className="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-ink px-6 py-3 text-bone"
+            className="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-ember px-6 py-3 text-obsidian"
           >
             <span className="type-label">Order Online</span>
             <span>&rarr;</span>

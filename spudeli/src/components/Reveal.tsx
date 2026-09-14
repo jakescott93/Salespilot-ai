@@ -8,7 +8,7 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 export function Reveal({
   children,
   delay = 0,
-  y = 20,
+  y = 24,
   className,
 }: {
   children: ReactNode;
@@ -30,16 +30,17 @@ export function Reveal({
   );
 }
 
-/**
- * Masked serif headline that rises line-by-line. Plays on mount (use for
- * above-the-fold headings where a scroll trigger would never fire).
- */
+/** Masked serif headline that rises line-by-line. Plays on mount. */
 export function RiseLines({
   lines,
   className,
+  stagger = 0.12,
+  start = 0.1,
 }: {
   lines: string[];
   className?: string;
+  stagger?: number;
+  start?: number;
 }) {
   const reduce = useReducedMotion();
   return (
@@ -48,9 +49,9 @@ export function RiseLines({
         <span key={i} className="block overflow-hidden pb-[0.08em]">
           <motion.span
             className="block"
-            initial={reduce ? { opacity: 0 } : { y: "110%" }}
+            initial={reduce ? { opacity: 0 } : { y: "115%" }}
             animate={reduce ? { opacity: 1 } : { y: "0%" }}
-            transition={{ duration: 1, ease: EASE, delay: 0.15 + i * 0.12 }}
+            transition={{ duration: 1, ease: EASE, delay: start + i * stagger }}
           >
             {line}
           </motion.span>
