@@ -50,15 +50,53 @@ export const img = {
   brownie: "/img/brownie.webp",
   interior: "/img/interior.webp",
   embers: "/img/embers.webp",
+  sphero: "/img/sphero.webp",
+  spbenefit: "/img/spbenefit.webp",
+  sploaded: "/img/sploaded.webp",
+  // Real photos from Instagram @spudeli_
+  real1: "/img/real1.jpg",
+  real2: "/img/real2.jpg",
+  real3: "/img/real3.jpg",
+  real4: "/img/real4.jpg",
+};
+
+/** Sweet potato — a signature choice at Spüdeli. General, well-established
+ * nutrition facts (true of sweet potato as an ingredient). */
+export const benefits = {
+  eyebrow: "Load It On A Sweet Potato",
+  title: "The spud that loves you back.",
+  lede:
+    "Every Spüdeli spud can be built on a fluffy baked sweet potato — the same slow-smoked toppings, on a base that actually does you good.",
+  points: [
+    { k: "Vitamin A", v: "One sweet potato is loaded with beta-carotene — great for eyes, skin and immunity." },
+    { k: "Slow-release energy", v: "A lower glycaemic index than white potato, so you stay fuller for longer." },
+    { k: "High in fibre", v: "Naturally rich in fibre for happy, healthy digestion." },
+    { k: "Vitamin C & potassium", v: "Everyday goodness with antioxidants, and naturally gluten-free." },
+  ],
+};
+
+/** Real photos + the business's own words, from Instagram @spudeli_. */
+export const gallery = {
+  eyebrow: "Straight From The Counter",
+  title: "The real thing.",
+  note: "Real photos from @spudeli_",
+  shots: [
+    { image: img.real1, caption: "Steak house — gravy on our sweet potato jacket" },
+    { image: img.real3, caption: "Slow-cooked beef short rib" },
+    { image: img.real2, caption: "Sunday deli roast dinners" },
+    { image: img.real4, caption: "Sundays at Spüdeli" },
+  ],
 };
 
 export const marquee = [
   "Slow-smoked",
   "Loaded deli spuds",
+  "Sweet potato jackets",
   "Cooked slow · served fast",
-  "Hot counter specials",
+  "Beef short rib",
   "Sunday deli roasts",
   "Birkenhead · Wirral",
+  "Built different since day one",
   "Open 7 days",
 ];
 
@@ -67,11 +105,11 @@ export const craft = {
   title: "Low and slow. The Wirral way.",
   paragraphs: [
     "Spüdeli is Wirral's only smoke house deli. Everything starts on the smoke — briskets, pork and lamb cooked low and slow until they pull apart, then loaded onto proper deli spuds and served fast across the counter.",
-    "It's honest, generous food with real fire behind it. Deli spuds, a changing hot counter, fresh salads and Sunday roasts — for collection on Laird Street or delivered across the Wirral.",
+    "Choose your base — a classic jacket or a fluffy baked sweet potato — and pile it high. It's honest, generous food with real fire behind it, built different since day one. Deli spuds, a changing hot counter, fresh salads and Sunday roasts, for collection on Laird Street or delivered across the Wirral.",
   ],
   marks: [
     { k: "Slow-smoked", v: "Meats cooked low & slow" },
-    { k: "Loaded spuds", v: "The signature deli spud" },
+    { k: "Sweet or classic", v: "Load it your way" },
     { k: "7 days", v: "Collection & delivery" },
   ],
 };

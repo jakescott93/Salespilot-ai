@@ -17,8 +17,8 @@ export function Hero() {
       {/* Hero image */}
       <div className="absolute inset-0 -z-10">
         <motion.img
-          src={img.hero}
-          alt="A loaded deli spud piled with slow-smoked beef brisket"
+          src={img.sphero}
+          alt="A loaded sweet potato spud piled with slow-smoked beef brisket"
           className="h-full w-full object-cover"
           initial={reduce ? {} : { scale: 1.12 }}
           animate={reduce ? {} : { scale: 1 }}
@@ -55,8 +55,8 @@ export function Hero() {
           transition={{ duration: 1, ease: EASE, delay: 0.85 }}
         >
           <p className="type-lede text-cream">
-            Wirral&rsquo;s only smoke house deli. Slow-cooked meats and loaded
-            deli spuds, {site.tagline.toLowerCase()}
+            Wirral&rsquo;s only smoke house deli. Slow-smoked meats piled on
+            loaded jackets &amp; sweet potato spuds. {site.tagline}
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
