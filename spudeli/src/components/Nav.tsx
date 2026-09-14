@@ -5,9 +5,10 @@ import { site } from "@/content/site";
 import { Wordmark, Logo } from "./Brand";
 
 const links = [
-  { href: "#menu", label: "Menu" },
-  { href: "#craft", label: "The Craft" },
-  { href: "#find", label: "Find Us" },
+  { href: "/#menu", label: "Menu" },
+  { href: "/#craft", label: "The Craft" },
+  { href: "/film", label: "Film" },
+  { href: "/#find", label: "Find Us" },
 ];
 
 export function Nav() {

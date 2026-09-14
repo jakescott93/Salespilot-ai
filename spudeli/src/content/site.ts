@@ -55,11 +55,35 @@ export const img = {
   sploaded: "/img/sploaded.webp",
   logo: "/img/logo.png",
   logomark: "/img/logomark.png",
+  enterbg: "/img/enterbg.webp",
+  enterbgv: "/img/enterbgv.webp",
   // Real photos from Instagram @spudeli_
   real1: "/img/real1.jpg",
   real2: "/img/real2.jpg",
   real3: "/img/real3.jpg",
   real4: "/img/real4.jpg",
+};
+
+/**
+ * Film — Spüdeli's real Instagram reels (embedded by shortcode) plus a slot
+ * for influencer YouTube reviews. No YouTube reviews exist publicly yet, so
+ * `youtube` is empty and ready for real links; nothing is invented.
+ */
+export const film = {
+  eyebrow: "Spüdeli On Film",
+  title: "Watch it come off the smoke.",
+  lede:
+    "Real reels from the counter — @spudeli_. Influencer reviews will land here as they drop.",
+  reels: [
+    { shortcode: "Db_HsTfMedK", caption: "Beef short rib — hot counter" },
+    { shortcode: "Dc8YW8rDJ0b", caption: "A new local favourite" },
+    { shortcode: "Dc8aMwfs8Y7", caption: "Sunday deli roast dinners" },
+    { shortcode: "Db-mA5AMlYn", caption: "Slow-cooked beef short rib" },
+    { shortcode: "DbilQjfsgg4", caption: "Sunday roasts, done properly" },
+    { shortcode: "Dbi5ogCMP64", caption: "Sundays at Spüdeli" },
+  ],
+  // Add influencer review video IDs here, e.g. { id: "abc123", who: "@reviewer" }
+  youtube: [] as { id: string; who: string }[],
 };
 
 /** Sweet potato — a signature choice at Spüdeli. General, well-established

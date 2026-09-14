@@ -26,6 +26,9 @@ g sphero.webp     hf_20260914_124644_2eb41af4-f4e9-4271-8ad5-6dfcf307d74a_min.we
 g spbenefit.webp  hf_20260914_124644_9793c5e5-75d8-4f69-8846-e4489f490ee0_min.webp
 g sploaded.webp   hf_20260914_124644_93968b49-bd40-49a0-be13-a6227e5d4fd3_min.webp
 
+g enterbg.webp    hf_20260914_132635_2a51b2c5-d1c4-401e-86ac-bdc3cd647360_min.webp
+g enterbgv.webp   hf_20260914_132636_fa3b99f3-4e02-4ed5-8a48-5634ca1cfc33_min.webp
+
 # --- Spüdeli's real logo (their Instagram brand mark) ---
 curl -fsSL -o "$DIR/logo.png" "https://d2ol7oe51mr4n9.cloudfront.net/user_3C8OkTgGhJ23GOJgkItDmo6xIYC/346cd49c-db18-43e0-9392-ea8413d05c0b.png" && echo "img logo.png" || echo "MISS logo.png"
 curl -fsSL -o "$DIR/logomark.png" "https://d8j0ntlcm91z4.cloudfront.net/user_3C8OkTgGhJ23GOJgkItDmo6xIYC/hf_20260914_131903_b5b86e4d-e881-4e9b-a1ff-628293b9c1ea.png" && echo "img logomark.png" || echo "MISS logomark.png"

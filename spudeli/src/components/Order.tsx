@@ -1,4 +1,4 @@
-import { site } from "@/content/site";
+import { site, img } from "@/content/site";
 import { Reveal } from "./Reveal";
 import { Embers } from "./Embers";
 
@@ -16,6 +16,14 @@ const platforms = [
 export function Order() {
   return (
     <section className="relative overflow-hidden bg-char">
+      <div className="absolute inset-0 -z-10" aria-hidden>
+        <img
+          src={img.smoke}
+          alt=""
+          className="h-full w-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-char/70" />
+      </div>
       <div
         className="absolute inset-0"
         style={{

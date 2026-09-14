@@ -4,6 +4,7 @@ import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { Craft } from "@/components/Craft";
 import { Benefits } from "@/components/Benefits";
+import { Divider, FilmTeaser } from "@/components/Divider";
 import { Signatures } from "@/components/Signatures";
 import { Gallery } from "@/components/Gallery";
 import { Menu } from "@/components/Menu";
@@ -21,8 +22,10 @@ export default function Home() {
         <Marquee />
         <Craft />
         <Benefits />
+        <Divider />
         <Signatures />
         <Gallery />
+        <FilmTeaser />
         <Menu />
         <Order />
         <Find />
